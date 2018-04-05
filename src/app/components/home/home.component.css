@@ -1,0 +1,12 @@
+div.card{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.bg-gray{
+  background-color: lightgray;
+}
+
+td,th {
+   text-align: center;
+}

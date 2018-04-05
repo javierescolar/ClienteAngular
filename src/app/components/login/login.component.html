@@ -1,0 +1,59 @@
+<div class="container">
+
+  <div class="container-login">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col">
+            <h1>{{company}}</h1>
+        </div>
+
+        <div class="col">
+          <img src="assets/imgs/madisa.jpg" class="img img-responsive">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card col-md-8">
+          <div class="card-header bgcolor-madisa">
+            Formulario de Acceso
+          </div>
+          <div class="card-body">
+            <form #loginForm="ngForm" (ngSubmit)="loginOnSubmit()">
+
+              <div class="col">
+                <label for="username">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-circle"></i></span>
+                  </div>
+                  <input [(ngModel)]="loginUsernameText" #loginUsername="ngModel"  name="username" type="text" class="form-control" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                </div>
+              </div>
+
+              <div class="col">
+                <label for="username">Password</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                  </div>
+                  <input [(ngModel)]="loginPassText"  #loginPass="ngModel" name="password" type="password" class="form-control" placeholder="Password" aria-describedby="inputGroupPrepend" required>
+
+                </div>
+              </div>
+              <br>
+              <div class="col-md-6">
+                  <input type="submit" [disabled]="!loginForm.form.valid" value="Acceder" class="btn bgcolor-madisa">
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>

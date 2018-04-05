@@ -1,0 +1,64 @@
+<app-nav></app-nav>
+<div class="container bg-gray">
+  <div class="row">
+    <div class="col-md-12 bg-dark">
+        <h2 class="text-center text-white"><i class="fab fa-cpanel"></i> Dashboard</h2>
+    </div>
+
+  </div>
+  <div class="row">
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bgcolor-madisa">
+            <i class="fas fa-key"></i>
+            Licencias
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <th>Key</th>
+                <th>Creada</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let n of [0,1,2,3,4,5,6,10,11,12,13,14]">
+                  <td>a45sd4asd4a5</td>
+                  <td>12/03/2018</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bgcolor-madisa">
+            <i class="fas fa-users"></i>
+            Usuarios
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <th>Nombre y Apellidos</th>
+                <th>Cliente</th>
+                <th>Online</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let n of [0,1,2,3,4,5,6,10,11,12,13,14]">
+                  <td>Javier Escolar Salcedo</td>
+                  <td>Madisa</td>
+                  <td *ngIf="n%2==0"><i class="fas fa-circle text-danger"></i></td>
+                  <td *ngIf="n%2!=0"><i class="fas fa-circle text-success"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+
+
+</div>

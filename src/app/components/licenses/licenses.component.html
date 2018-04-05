@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<p *ngFor="let license of licenses">
+  {{license |json}}
+</p>
+<div id="accordion">
+  <div class="card" *ngFor="let license of licenses">
+    <div class="card-header">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#collapse' + license._id" aria-expanded="true" aria-controls="collapseOne">
+          {{license._id}}
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapse{{license._id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <p>{{license.updatedAt}}</p>
+        <p>{{license.createdAt}}</p>
+        <p>{{license.client}}</p>
+        <p>{{license.user}}</p>
+      </div>
+    </div>
+  </div>
+</div>
